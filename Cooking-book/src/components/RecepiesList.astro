@@ -1,0 +1,39 @@
+---
+import Card from "./Card.astro";
+const allRecepies = await Astro.glob("../content/recepies/*.json");
+---
+
+<div class="recepies-list">
+  {
+    allRecepies.map((recepie) => (
+      <Card
+        id={recepie.id}
+        title={recepie.name}
+        body={recepie.description}
+      />
+    ))
+  }
+</div>
+
+<style>
+  body {
+    margin: 0;
+  }
+
+  .recepies-list {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 33.3%);
+    grid-template-rows: repeat(auto-fill, max(35%));
+
+    overflow-y: auto;
+  }
+
+  @media only screen and (max-width: 610px) {
+    .recepies-list {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+</style>
