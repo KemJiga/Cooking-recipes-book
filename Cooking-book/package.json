@@ -10,6 +10,9 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^2.8.1"
+    "astro": "^2.8.1",
+    "express": "^4.18.2",
+    "mongoose": "^7.3.4",
+    "require": "^2.4.20"
   }
 }

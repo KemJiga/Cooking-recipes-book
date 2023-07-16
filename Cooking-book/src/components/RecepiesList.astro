@@ -1,10 +1,10 @@
 ---
 import Card from "./Card.astro";
-const allRecepies = await Astro.glob("../content/recepies/*.json");
+//const allRecepies = await Astro.glob("../content/recepies/*.json");
 ---
 
 <div class="recepies-list">
-  {
+  <!-- {
     allRecepies.map((recepie) => (
       <Card
         id={recepie.id}
@@ -12,7 +12,7 @@ const allRecepies = await Astro.glob("../content/recepies/*.json");
         body={recepie.description}
       />
     ))
-  }
+  } -->
 </div>
 
 <style>
@@ -37,3 +37,4 @@ const allRecepies = await Astro.glob("../content/recepies/*.json");
     }
   }
 </style>
+

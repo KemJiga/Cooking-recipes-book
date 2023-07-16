@@ -16,7 +16,6 @@ const { id, title, body } = Astro.props;
     <p>
       {body}
     </p>
-	<span class="more">Mira más <span>&rarr;</span></span>
   </a>
 </li>
 <style>
@@ -55,22 +54,11 @@ const { id, title, body } = Astro.props;
     margin-bottom: 0;
     color: #444;
 
-	width: 100%;
-	height: fit-content;
+    width: 100%;
+    height: fit-content;
 
     inline-size: 100%;
     overflow: hidden;
-  }
-
-  .more {
-	position: relative;
-	left: 82%;
-	margin-bottom: 40px;
-  }
-
-  .more:hover {
-	color: rgb(var(--accent));
-	text-decoration: underline;
   }
 
   .link-card:is(:hover, :focus-within) {
@@ -79,5 +67,23 @@ const { id, title, body } = Astro.props;
   }
   .link-card:is(:hover, :focus-within) h2 {
     color: rgb(var(--accent));
+  }
+
+  @media only screen and (max-width: 968px) {
+    p {
+      font-size: 0.9rem;
+    }
+  }
+
+  @media only screen and (max-width: 803px) {
+    p {
+      font-size: 0.8rem;
+    }
+  }
+
+  @media only screen and (min-width: 610px) and (max-width: 659px) {
+    p {
+      font-size: 0.7rem;
+    }
   }
 </style>
